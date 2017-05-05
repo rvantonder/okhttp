@@ -1359,6 +1359,7 @@ public final class URLConnectionTest {
 
     RecordedRequest request = server.takeRequest();
     assertEquals("gzip", request.getHeader("Accept-Encoding"));
+    gunzippedIn.close()
   }
 
   @Test public void gzipAndConnectionReuseWithFixedLength() throws Exception {
